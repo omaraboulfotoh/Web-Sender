@@ -5,7 +5,6 @@ import com.websocket.endpoint.ServerEndpoint;
 import org.glassfish.tyrus.client.ClientManager;
 import org.glassfish.tyrus.server.Server;
 
-import static com.websocket.util.JsonUtil.formatMessage;
 
 import javax.websocket.DeploymentException;
 import javax.websocket.Session;
@@ -42,7 +41,7 @@ public class WebSenderService {
 
     public void sendMessage(String message) {
         try {
-            session.getBasicRemote().sendText(formatMessage(message, "client"));
+            session.getBasicRemote().sendText(message);
         } catch (IOException e) {
             System.out.println("there is error when sending to the server");
             e.printStackTrace();
