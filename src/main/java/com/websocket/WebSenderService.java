@@ -5,7 +5,6 @@ import com.websocket.endpoint.ServerEndpoint;
 import org.glassfish.tyrus.client.ClientManager;
 import org.glassfish.tyrus.server.Server;
 
-
 import javax.websocket.DeploymentException;
 import javax.websocket.Session;
 import java.io.IOException;

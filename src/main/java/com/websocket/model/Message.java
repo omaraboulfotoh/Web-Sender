@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class Message {
 
-    private String message;
+    private final String message;
     private String timeStamp;
 
     Message(String message) {
