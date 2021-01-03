@@ -12,24 +12,21 @@ version = '1.0-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
-    mavenLocal()
-    maven {
-        url = uri('http://repo.maven.apache.org/maven2')
-    }
+    mavenCentral()
 }
 
 dependencies {
-    implementation 'javax.websocket:javax.websocket-api:1.0'
+    implementation 'javax.websocket:javax.websocket-api:1.1'
     implementation 'org.glassfish.tyrus:tyrus-server:1.1'
     implementation 'org.glassfish.tyrus:tyrus-client:1.1'
     implementation 'org.glassfish.tyrus:tyrus-container-grizzly:1.1'
     implementation 'org.glassfish:javax.json:1.0.4'
 }
 
-//publishing {
-//    publications {
-//        maven(MavenPublication) {
-//            from(components.java)
-//        }
-//    }
-//}
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from(components.java)
+        }
+    }
+}
