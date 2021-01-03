@@ -1,20 +1,16 @@
 package com.websocket.endpoint;
 
-import static java.lang.String.format;
+import com.websocket.model.Message;
+import com.websocket.model.MessageDecoder;
+import com.websocket.model.MessageEncoder;
 
+import javax.websocket.*;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
-import javax.websocket.EncodeException;
-import javax.websocket.OnClose;
-import javax.websocket.OnMessage;
-import javax.websocket.OnOpen;
-import javax.websocket.Session;
 
-import com.websocket.model.Message;
-import com.websocket.model.MessageDecoder;
-import com.websocket.model.MessageEncoder;
+import static java.lang.String.format;
 
 @javax.websocket.server.ServerEndpoint(value = "/chat", encoders = MessageEncoder.class, decoders = MessageDecoder.class)
 public class ServerEndpoint {

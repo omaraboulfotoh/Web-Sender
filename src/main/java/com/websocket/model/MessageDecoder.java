@@ -1,10 +1,9 @@
 package com.websocket.model;
 
-import javax.json.Json;
-import javax.json.JsonObject;
 import javax.websocket.DecodeException;
 import javax.websocket.Decoder;
 import javax.websocket.EndpointConfig;
+
 public class MessageDecoder implements Decoder.Text<Message> {
 
     @Override
@@ -17,8 +16,8 @@ public class MessageDecoder implements Decoder.Text<Message> {
 
     @Override
     public Message decode(final String textMessage) throws DecodeException {
-        Message message = new Message(textMessage);
-        return message;
+        // TODO: 1/3/21 Does this function really throws?
+        return new Message(textMessage);
     }
 
     @Override

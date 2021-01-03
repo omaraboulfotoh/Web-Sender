@@ -1,9 +1,11 @@
 package com.websocket;
+
 import java.util.Scanner;
 
 
 public class Starter {
 
+    // TODO: 1/3/21 Does this function really throws?
     public static void main(String[] args) throws Exception {
         WebSenderService webSenderService = WebSenderService.getInstance();
         Scanner scanner = new Scanner(System.in);
@@ -16,6 +18,5 @@ public class Starter {
         } while (!message.equalsIgnoreCase("quit"));
 
         webSenderService.stopSender();
-
     }
 }
