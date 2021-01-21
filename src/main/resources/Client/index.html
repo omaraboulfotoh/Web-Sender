@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <title>WebSockets Connection Demo</title>
 
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="page-wrapper">
-      <h1 class="center"	>WebSockets Connection Demo</h1>
+        <h1 class="center">WebSockets Connection Demo</h1>
 
-      <div id="status">Connecting...</div>
+        <div id="status">Connecting...</div>
 
-      <ul id="messages"></ul>
-      <div class="center">
-        <button type="button" id="refresh">Refresh Connection</button>
-        <button type="button" id="close">Close Connection</button>
-      </div>
+        <div class="center">
+            <button type="button" id="refresh">Refresh Connection</button>
+            <button type="button" id="close">Close Connection</button>
+            <button type="button" id="send">Send Message</button>
+        </div>
+
+        <ul id="messages"></ul>
     </div>
 
     <script src="app.js"></script>
-  </body>
+</body>
+
 </html>
